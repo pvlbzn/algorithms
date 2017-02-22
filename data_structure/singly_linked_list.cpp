@@ -1,10 +1,38 @@
-// Implementation as of CLRS book 
+// This implementation follows CLRS book in therminology and definitions,
+// while implimentation may be different from a given pseudocode due to
+// adaptation for particular language.
+// 
+// Operations on dynamic sets:
+//      Search(S, k)
+//      Insert(S, x)
+//      Delete(S, x)
+//      Minimum(S)
+//      Maximum(S)
+//      Successor(S, x)
+//      Predecessor(S, x)
+//
+// Operations on Linked List
+//      List-Search(L, k)
+//      List-Insert(L, x)
+//      List-Delete(L, x)
+//
+// Pavel Bazin 2017
+
 
 #include <cstdlib>
 
 #include "singly_linked_list.hpp"
 
-// Insert a new node by reference
+/**
+ * List-Insert(L, k) implementation.
+ * Inserts node with value key to a linked list.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      list: pointer to a list's head
+ *      node: pointer to a node which must be inserted into a list 
+ */
 void insert(list_t *list, node_t *node)
 {
     if (list->head != NULL)
@@ -14,7 +42,16 @@ void insert(list_t *list, node_t *node)
 }
 
 
-// Insert a new node by value
+/**
+ * List-Insert(L, k) implementation.
+ * Inserts node with value key to a linked list.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      list: pointer to a lists's head
+ *      key:  value to be inserted into a list
+ */
 void insert(list_t *list, int key)
 {
     node_t *n = (node_t*) std::malloc(sizeof(node_t));
@@ -25,7 +62,16 @@ void insert(list_t *list, int key)
 }
 
 
-// Linear search in list
+/**
+ * List-Search(L, k) implementation.
+ * Find key in a linked list.
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list: pointer to a lists's head
+ *      key:  key to be found in a list
+ */
 node_t* search(list_t *list, int key)
 {
     node_t *node = list->head;
@@ -42,7 +88,14 @@ node_t* search(list_t *list, int key)
 
 
 /**
- * Remove element from linked list by value
+ * List-Delete(L, x) implementation.
+ * Remove element from a linked list by value.
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list: pointer to a lists's head
+ *      key:  key to be removed from a list
  *
  * To delete element x from the linked list the x's predecessor node's next
  * attribute must hold the pointer to x's successor node.
@@ -70,7 +123,22 @@ void remove(list_t *list, int key)
 }
 
 
-// Remove element from linked list by reference
+/**
+ * List-Delete(L, x) implementation.
+ * Remove element from a linked list by value.
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list:   pointer to a lists's head
+ *      target: reference to a node which must be deleted from a list
+ *
+ * To delete element x from the linked list the x's predecessor node's next
+ * attribute must hold the pointer to x's successor node.
+ *
+ * However singly linked list has no pointer on predecessor node, therefore
+ * there are no O(1) solution, but O(n) at worst case.
+ */
 void remove(node_t *n, node_t *target)
 {
     ;
