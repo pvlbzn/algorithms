@@ -54,9 +54,8 @@ void insert(list_t *list, node_t *node)
  */
 void insert(list_t *list, int key)
 {
-    node_t *n = (node_t*) std::malloc(sizeof(node_t));
+    node_t *n = new node_t();
     n->data = key;
-    n->next = NULL;
 
     insert(list, n);
 }
@@ -111,10 +110,12 @@ void remove(list_t *list, int key)
     while (node != NULL) {
         if (node->data == key and prev == NULL) {
             list->head = node->next;
-            std::free(node);
+            delete node;
+            return;
         } else if (node->data == key and prev != NULL) {
             prev->next = node->next;
-            std::free(node);
+            delete node;
+            return;
         }
 
         prev = node;
@@ -133,13 +134,49 @@ void remove(list_t *list, int key)
  *      list:   pointer to a lists's head
  *      target: reference to a node which must be deleted from a list
  *
- * To delete element x from the linked list the x's predecessor node's next
- * attribute must hold the pointer to x's successor node.
- *
- * However singly linked list has no pointer on predecessor node, therefore
- * there are no O(1) solution, but O(n) at worst case.
+ * To delete particular node, due to limitation of singly linked list, a node
+ * fisrt must be found in a linked list. The procudure is very similar
+ * to delete by key, but we can not do remove(target->data) because list
+ * may contain n elements with the same data but on different addresses.
  */
-void remove(node_t *n, node_t *target)
+void remove(list_t *list, node_t *target)
 {
-    ;
+    node_t *prev = NULL;
+    node_t *node = list->head;
+
+    while (node != NULL) {
+        if (node == target and prev == NULL) {
+            list->head = node->next;
+            delete target;
+            return;
+        } else if (node == target and prev != NULL) {
+            prev->next = node->next;
+            delete target;
+            return;
+        }
+
+        prev = node;
+        node = node->next;
+    }
+}
+
+
+/**
+ * Helper factory functions, not defined in CLRS
+ */
+list_t* list_factory()
+{
+    list_t *l = new list_t();
+    l->head = NULL;
+
+    return l;
+}
+
+node_t* node_factory()
+{
+    node_t *n = new node_t();
+    n->data = 0;
+    n->next = NULL;
+
+    return n;
 }

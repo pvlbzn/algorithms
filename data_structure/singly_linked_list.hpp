@@ -1,4 +1,6 @@
-// Implementation as of CLRS book.
+// This implementation follows CLRS book in therminology and definitions,
+// while implimentation may be different from a given pseudocode due to
+// adaptation for particular language.
 // 
 // Operations on dynamic sets:
 //      Search(S, k)
@@ -13,6 +15,9 @@
 //      List-Search(L, k)
 //      List-Insert(L, x)
 //      List-Delete(L, x)
+//
+// Pavel Bazin 2017
+
 
 struct list_t
 {
@@ -31,4 +36,9 @@ void insert(list_t *list, int key);
 node_t* search(list_t *list, int key);
 
 void remove(list_t *list, int key);
-void remove(node_t *n, node_t *target);
+void remove(list_t *list, node_t *target);
+
+
+// Helper factory functions, not defined in CLRS
+list_t* list_factory();
+node_t* node_factory();
