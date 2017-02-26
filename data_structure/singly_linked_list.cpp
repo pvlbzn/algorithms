@@ -161,8 +161,18 @@ void remove(list_t *list, node_t *target)
 }
 
 
+//
+// Additional functionality, not defined in CLRS
+//
+
+
 /**
- * Helper factory functions, not defined in CLRS
+ * List factory
+ *
+ * List factory is a preffered way of creating a new list because of UB.
+ *
+ * Returns:
+ *      null-initialized list
  */
 list_t* list_factory()
 {
@@ -172,6 +182,15 @@ list_t* list_factory()
     return l;
 }
 
+
+/**
+ * Node factory
+ *
+ * Node factory is a preffered way of creating a new node because of UB.
+ *
+ * Returns:
+ *      null-initialized node
+ */
 node_t* node_factory()
 {
     node_t *n = new node_t();
@@ -179,4 +198,56 @@ node_t* node_factory()
     n->next = NULL;
 
     return n;
+}
+
+
+/**
+ * Get node by index
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list: pointer to a lists's head
+ *      pos:  position of the node
+ *
+ * Returns:
+ *      pointer to the node in required position or NULL in case if node
+ *      with such an index does't exists.
+ */
+node_t* get_node(list_t *list, int pos)
+{
+    node_t *node = list->head;
+
+    for (int i = 0; i < pos; i++) {
+        if (node == NULL) return NULL;
+        node = node->next;
+    }
+    
+    return node;
+}
+
+
+/**
+ * Get size of a list
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list: pointer to a lists's head
+ * 
+ * Returns:
+ *      size of the list
+ */
+int size(list_t *list)
+{
+    node_t *node = list->head;
+
+    int size = 0;
+
+    while (node != NULL) {
+        node = node->next;
+        size += 1;
+    }
+
+    return size;
 }

@@ -42,3 +42,7 @@ void remove(list_t *list, node_t *target);
 // Helper factory functions, not defined in CLRS
 list_t* list_factory();
 node_t* node_factory();
+
+// Access function
+node_t* get_node(list_t *list, int pos);
+int size(list_t *list);
