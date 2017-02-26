@@ -18,6 +18,7 @@
 //
 // Pavel Bazin 2017
 
+#pragma once
 
 struct list_t
 {
