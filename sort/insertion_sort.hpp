@@ -6,5 +6,10 @@
 //
 // Pavel Bazin 2017
 
+#pragma once
+
+#include "../data_structure/singly_linked_list.hpp"
+
 
 void insertion_sort(int *, unsigned int);
+void insertion_sort_naive(list_t *);
