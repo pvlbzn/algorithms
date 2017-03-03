@@ -15,7 +15,7 @@
 //      List-Search(L, k)
 //      List-Insert(L, x)
 //      List-Delete(L, x)
-//
+// 
 // Pavel Bazin 2017
 
 
@@ -37,7 +37,7 @@ void insert(list_t *list, node_t *node)
 {
     if (list->head != NULL)
         node->next = list->head;
-
+    
     list->head = node;
 }
 
@@ -55,6 +55,7 @@ void insert(list_t *list, node_t *node)
 void insert(list_t *list, int key)
 {
     node_t *n = new node_t();
+    n->next = NULL;
     n->data = key;
 
     insert(list, n);
@@ -228,6 +229,39 @@ node_t* get_node(list_t *list, int pos)
 
 
 /**
+ * Insert function overloading
+ * Insert node at a given postition.
+ *
+ * Complexity: O(n)
+ *
+ * Args:
+ *      list:    pointer to a lists's head
+ *      pos:     position to what new node must be inserted
+ *      element: pointer to a new node
+ *
+ * Because of singly linked list limitation, operation of insertion at some
+ * particular point can not be performed at a constant complexity, only
+ * at a linear one.
+ */
+void insert(list_t *list, int pos, node_t *element)
+{
+    node_t *node = list->head;
+    node_t *prev = NULL;
+
+    if (node == NULL or pos == 0) {
+        insert(list, element);
+        return;
+    }
+    
+    prev = get_node(list, pos-1);
+    node = prev->next;
+
+    prev->next = element;
+    element->next = node;
+}
+
+
+/**
  * Get size of a list
  *
  * Complexity: O(n)
@@ -250,4 +284,38 @@ int size(list_t *list)
     }
 
     return size;
+}
+
+
+/**
+ * Swap backwards
+ *
+ *
+ */
+void swap(list_t *list, node_t *node)
+{
+   if (list->head->next == NULL or node == list->head) return;
+
+    node_t *tmp;
+
+    if ((list->head->next != NULL and list->head->next->next == NULL) or list->head->next == node) {
+        tmp = list->head;
+        tmp->next = node->next;
+        list->head = node;
+        node->next = tmp;
+        return;
+    }
+
+    node_t *preprev = list->head;
+    node_t *prev = preprev->next;
+
+    while (prev->next != node) {
+        preprev = prev;
+        prev = prev->next;
+    }
+
+    tmp = prev;
+    tmp->next = node->next;
+    preprev->next = node;
+    node->next = tmp;
 }
