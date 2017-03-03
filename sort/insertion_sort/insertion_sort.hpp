@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include "../data_structure/singly_linked_list.hpp"
-
+#include "../../data_structure/singly_linked_list.hpp"
 
 void insertion_sort(int *, unsigned int);
 void insertion_sort_naive(list_t *);
+void insertion_sort(list_t *);
