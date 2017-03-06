@@ -53,7 +53,7 @@ void insert(list_t *head, node_t *node, int at)
 {
     node_t *tmp = head->nil->next;
 
-    for (int i = 0; i < at; i += 1)
+    for (int i = 0; i <= at; i += 1)
         tmp = tmp->next;
     
     node->next = tmp;
