@@ -19,3 +19,12 @@ void insert(list_t *head, node_t *node)
     head->nil->next = node;
     node->prev = head->nil;
 }
+
+
+void remove(list_t *head, node_t *node)
+{
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+
+    delete node;
+}
