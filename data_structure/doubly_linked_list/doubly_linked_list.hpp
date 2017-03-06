@@ -1,6 +1,11 @@
-#include <cstdlib>
+// Circular doubly linked list with a sentinel implementation.
+//
+// Pavel Bazin 2017
 
 #pragma once
+
+#include <cstdlib>
+#include <iostream>
 
 
 
@@ -22,30 +27,18 @@ struct node_t
     struct node_t* prev;
 };
 
-
-list_t* list_factory()
-{
-    list_t *list = new list_t();
-    list->nil = NULL;
-    
-    return list;
-}
-
-
-node_t* node_factory()
-{
-    node_t *node = new node_t();
-    node->data = 0;
-    node->next = NULL;
-    node->prev = NULL;
-
-    return node;
-}
-
+list_t* list_factory();
+node_t* node_factory();
 
 node_t* search(list_t *head, int key);
+node_t* get(list_t *head, int at);
 void    insert(list_t *head, node_t *node);
+void    insert(list_t *head, int key);
 void    insert(list_t *head, node_t *node, int at);
+void    insert(list_t *head, int key, int at);
 void    remove(list_t *head, node_t *node);
 void    swap(list_t *head, node_t *a, node_t *b);
+list_t* cut(list_t *head, int at);
 int     size(list_t *head);
+
+std::string to_str(list_t *head);
