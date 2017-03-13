@@ -217,6 +217,8 @@ node_t* node_factory()
  */
 node_t* get_node(list_t *list, int pos)
 {
+    if (pos < 0) return NULL;
+    
     node_t *node = list->head;
 
     for (int i = 0; i < pos; i++) {
