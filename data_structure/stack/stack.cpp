@@ -10,6 +10,9 @@
 // structure.
 //
 // Pavel Bazin 2017
+
+
+
 #include "./stack.hpp"
 
 #define NULL 0
