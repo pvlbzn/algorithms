@@ -79,7 +79,7 @@ void insert(list_t *head, int key, int at)
 }
 
 
-void remove(list_t *head, node_t *node)
+void remove(node_t *node)
 {
     node->prev->next = node->next;
     node->next->prev = node->prev;
