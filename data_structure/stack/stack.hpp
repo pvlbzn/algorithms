@@ -1,4 +1,4 @@
-// Stack datastructure implementation
+// Stack datastructure implementation using singly linked list.
 //
 // Principal operations on Stack:
 //      Push
