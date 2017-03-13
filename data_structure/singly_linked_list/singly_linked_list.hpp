@@ -31,21 +31,17 @@ struct node_t
     struct node_t* next;
 };
 
-void insert(list_t *list, node_t *node);
 void insert(list_t *list, int key);
 
 node_t* search(list_t *list, int key);
 
 void remove(list_t *list, int key);
-void remove(list_t *list, node_t *target);
 
 
 // Helper factory functions, not defined in CLRS
 list_t* list_factory();
-node_t* node_factory();
 
 // Access function
-node_t* get_node(list_t *list, int pos);
 int size(list_t *list);
 
 // Insertion
