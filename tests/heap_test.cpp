@@ -5,7 +5,7 @@
 
 
 
-TEST_CASE( "heap should behave accordingly to specification", "[heap]" )
+TEST_CASE( "heap should behave accordingly to the specification", "[heap]" )
 {
     int heap[10] { 16, 14, 10, 8, 7, 9, 3, 2, 4, 1 };
     
@@ -41,4 +41,14 @@ TEST_CASE( "heap should behave accordingly to specification", "[heap]" )
 
         for (int i = 0; i < 10; i += 1) REQUIRE(heap[i] == arr[i]);
     }
+}
+
+TEST_CASE("heapsort should behave accordingly to the specification", "[heapsort]")
+{
+    int heap[10]        { 8, 9, 2, 4, 11, 3, 5, 21, 16, 7 };
+    int sorted_heap[10] { 2, 3, 4, 5, 7, 8, 9, 11, 16, 21 };
+
+    heapsort(heap, 10);
+
+    for (int i = 0; i < 10; i += 1) REQUIRE(heap[i] == sorted_heap[i]);
 }

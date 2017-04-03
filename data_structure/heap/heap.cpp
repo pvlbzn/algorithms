@@ -41,3 +41,14 @@ void build_heap(int *arr, int len)
 {
     for (int i = (len / 2) - 1; i >= 0; i -= 1) heapify(arr, len, i);
 }
+
+
+void heapsort(int *arr, int len)
+{
+    build_heap(arr, len);
+
+    for (int i = len - 1; i > 0; i -= 1) {
+        std::swap(arr[0], arr[i]);
+        heapify(arr, --len, 0);
+    }
+}
