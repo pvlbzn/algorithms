@@ -2,11 +2,7 @@
 //
 // Pavel Bazin 2017
 
-#pragma once
-
-#include <cstdlib>
-#include <iostream>
-
+#include <string>
 
 
 /**
@@ -32,7 +28,7 @@ list_t* list_factory();
 node_t* node_factory();
 
 node_t* search(list_t *head, int key);
-node_t* get(list_t *head, int at);
+node_t* get_node(list_t *head, int at);
 void    insert(list_t *head, node_t *node);
 void    insert(list_t *head, int key);
 void    insert(list_t *head, node_t *node, int at);
