@@ -9,16 +9,23 @@
 //          Delete: O(logn)
 //      Space: O(n)
 //
+// Binary Tree Property:
+//      Key in each node must be greater than or equal to any key stored
+//      in the left sub-tree, and less than or equal to any key stored
+//      in the right sub-tree.
+//
 // Pavel Bazin 2017
 
 
 typedef struct bst {
     int key;
-    bst *parent;
+    int value;
+
     bst *left;
     bst *right;
 } bst;
 
-bst *search(bst *t, int k);
+
+bool search(bst *t, int k);
 void insert(bst *t, int k);
 void remove(bst *t, int k);

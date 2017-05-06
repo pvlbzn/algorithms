@@ -9,23 +9,72 @@
 //          Delete: O(logn)
 //      Space: O(n)
 //
+// Binary Tree Property:
+//      Key in each node must be greater than or equal to any key stored
+//      in the left sub-tree, and less than or equal to any key stored
+//      in the right sub-tree.
+//
 // Pavel Bazin 2017
 
 #include <cstddef>
 
 #include "binary_search_tree.hpp"
 
-bst *search(bst *node, int target)
+
+/**
+ * Full node factory
+ *
+ * @param  key
+ * @param  parent
+ * @param  left
+ * @param  right
+ * @return initialized node
+ */
+bst *factory(int key, int value, bst *left, bst *right)
 {
-    // If tree is empty return NULL
-    if (node == NULL) return NULL;
+    auto *node = new bst;
 
-    // If we found a right key, return a node
-    if (node->key == target) return node;
+    node->key    = key;
+    node->value  = value;
+    node->left   = left;
+    node->right  = right;
 
-    // If target is bigger than current's node key
-    if (target < node->key)
-        return search(node->left, target);
-    else
-        return search(node->right, target);
+    return node;
 }
+
+/**
+ * Key-value node factory
+ *
+ * @param key
+ * @param value
+ * @return initialized node
+ */
+
+/**
+ * Empty node factory
+ *
+ * @return zero initialized node
+ */
+bst *factory()
+{
+    return factory(0, 0, NULL, NULL);
+}
+
+
+bool isBinarySearchTree(bst *node, int min, int max) {
+    return false;
+}
+
+
+bool search(bst *node, int key)
+{
+    if (node == NULL) return false;
+}
+
+void insert(bst *node, int key, int value)
+{
+    if (node == NULL)
+        node = factory(key, value);
+}
+
+void remove(bst *node, int key)
