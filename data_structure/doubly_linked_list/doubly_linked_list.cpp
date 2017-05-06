@@ -66,6 +66,8 @@ node_t* search(list_t *head, int key)
     while (node != head->nil and node->data != key)
         node = node->next;
 
+    if (node == head->nil) return NULL;
+
     return node;
 }
 
@@ -83,7 +85,7 @@ void insert(list_t *head, node_t *node, int at)
 {
     node_t *tmp = head->nil->next;
 
-    for (int i = 0; i <= at; i += 1)
+    for (int i = 0; i < at; i += 1)
         tmp = tmp->next;
 
     node->next = tmp;
@@ -120,19 +122,69 @@ void remove(node_t *node)
 
 node_t* get_node(list_t *head, int at)
 {
-    ; // implementation missing
+    node_t *node = head->nil->next;
+
+    while (node != head->nil and at != 0) {
+        at -= 1;
+        node = node->next;
+    }
+
+    if (at == 0 and node != head->nil) return node;
+    else return NULL;
 }
 
-
-void swap(list_t *head, node_t *a, node_t *b)
+bool are_neighbours(node_t *a, node_t *b)
 {
-    ; // implementation missing
+    return a->next == b or b->next == a ? true : false;
+}
+
+void swap(node_t *a, node_t *b)
+{
+    a->prev->next = b;
+    b->next->prev = a;
+
+    node_t *anext = a->next;
+    node_t *aprev = a->prev;
+    node_t *bnext = b->next;
+    node_t *bprev = b->prev;
+
+    if (are_neighbours(a, b)) {
+        a->next = b->next;
+        b->next = a;
+
+        a->prev = b->prev;
+        b->prev = aprev;
+    } else {
+        aprev->next = b;
+        b->next = anext;
+        b->prev = aprev;
+        anext->prev = b;
+
+        bprev->next = a;
+        a->next = bnext;
+        a->prev = bprev;
+        bnext->prev = a;
+    }
 }
 
 
 list_t* cut(list_t *head, int at)
 {
-    ; // implementation missing
+    node_t *node = get_node(head, at);
+
+    if (node == NULL) return NULL;
+
+    node_t *delete_from = node->next;
+
+    node->next = head->nil;
+    head->nil->prev = node;
+
+    while (delete_from != head->nil) {
+        delete_from = delete_from->next;
+        delete delete_from->prev;
+    }
+
+    return head;
 }
 
 
@@ -149,7 +201,14 @@ list_t* cut(list_t *head, int at)
  */
 int size(list_t *head)
 {
-    ; // implementation missing
+    node_t *tmp;
+    int i = 0;
+
+    for (tmp = head->nil->next; tmp != head->nil; tmp = tmp->next) {
+        i += 1;
+    }
+
+    return i;
 }
 
 

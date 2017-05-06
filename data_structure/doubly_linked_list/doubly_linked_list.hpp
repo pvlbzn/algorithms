@@ -34,7 +34,7 @@ void    insert(list_t *head, int key);
 void    insert(list_t *head, node_t *node, int at);
 void    insert(list_t *head, int key, int at);
 void    remove(node_t *node);
-void    swap(list_t *head, node_t *a, node_t *b);
+void    swap(node_t *a, node_t *b);
 list_t* cut(list_t *head, int at);
 int     size(list_t *head);
 
