@@ -1,4 +1,4 @@
-// Circular doubly linked list with a sentinel implementation.
+// Implementation of circular doubly linked list with a sentinel.
 //
 // Pavel Bazin 2017
 
@@ -72,6 +72,15 @@ node_t* search(list_t *head, int key)
 }
 
 
+/**
+ * Insert new node at the beginning of the list.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *      node: pointer to a newly created node which will be inserted
+ */
 void insert(list_t *head, node_t *node)
 {
     node->next = head->nil->next;
@@ -81,6 +90,16 @@ void insert(list_t *head, node_t *node)
 }
 
 
+/**
+ * Insert new node at the position.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *      node: pointer to a newly created node which will be inserted
+ *      at:   position
+ */
 void insert(list_t *head, node_t *node, int at)
 {
     node_t *tmp = head->nil->next;
@@ -95,6 +114,15 @@ void insert(list_t *head, node_t *node, int at)
 }
 
 
+/**
+ * Insert new node at the beginning of the list with a given key.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *      key:  new node's value
+ */
 void insert(list_t *head, int key)
 {
     node_t *node = node_factory();
@@ -103,6 +131,16 @@ void insert(list_t *head, int key)
 }
 
 
+/**
+ * Insert new node at the position 'at' with a given key.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *      key:  new node's value
+ *      at:   position
+ */
 void insert(list_t *head, int key, int at)
 {
     node_t *node = node_factory();
@@ -111,6 +149,14 @@ void insert(list_t *head, int key, int at)
 }
 
 
+/**
+ * Remove node from the list.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      node: pointer to the node which will be deleted
+ */
 void remove(node_t *node)
 {
     node->prev->next = node->next;
@@ -120,6 +166,18 @@ void remove(node_t *node)
 }
 
 
+/**
+ * Get node at position.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *      at:   position
+ *
+ * Returns:
+ *      node from 'at' position
+ */
 node_t* get_node(list_t *head, int at)
 {
     node_t *node = head->nil->next;
@@ -133,11 +191,22 @@ node_t* get_node(list_t *head, int at)
     else return NULL;
 }
 
+
 bool are_neighbours(node_t *a, node_t *b)
 {
     return a->next == b or b->next == a ? true : false;
 }
 
+
+/**
+ * Swap two nodes.
+ *
+ * Complexity: O(1)
+ *
+ * Args:
+ *      a: first node
+ *      b: second node
+ */
 void swap(node_t *a, node_t *b)
 {
     a->prev->next = b;
@@ -168,30 +237,10 @@ void swap(node_t *a, node_t *b)
 }
 
 
-list_t* cut(list_t *head, int at)
-{
-    node_t *node = get_node(head, at);
-
-    if (node == NULL) return NULL;
-
-    node_t *delete_from = node->next;
-
-    node->next = head->nil;
-    head->nil->prev = node;
-
-    while (delete_from != head->nil) {
-        delete_from = delete_from->next;
-        delete delete_from->prev;
-    }
-
-    return head;
-}
-
-
 /**
  * Get size of a list
  *
- * Complexity: O(n)
+ * Complexity: 𝛩(n)
  *
  * Args:
  *      list: pointer to a lists's head
@@ -212,6 +261,17 @@ int size(list_t *head)
 }
 
 
+/**
+ * Format list as a string.
+ *
+ * Complexity: 𝛩(n)
+ *
+ * Args:
+ *      head: pointer to the head of list (sentinel)
+ *
+ * Returns:
+ *      string with formatting "[a1, a2, .., aN]"
+ */
 std::string to_str(list_t *head)
 {
     node_t *node = head->nil->next;
