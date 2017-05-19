@@ -21,3 +21,21 @@ heap-test:
 	g++ heap.o heap_test.o -o heap_test
 	./heap_test -s
 	rm *.o heap_test
+
+binary-search-tree-test:
+	g++ -std=c++14 -c ../data_structure/binary_search_tree/binary_search_tree.cpp binary_search_tree_test.cpp
+	g++ bst.o bst_test.o -o bst_test
+	./bst_test -s
+	rm *.o bst_test
+
+graph-test:
+	g++ -std=c++14 -c ../data_structure/graph/graph.cpp graph_test.cpp
+	g++ graph.o graph_test.o -o graph_test
+	./graph_test -s
+	rm *.o graph_test
+
+rle-test:
+	g++ -std=c++14 -c ../encoding/rle/rle.cpp rle_encoding_test.cpp
+	g++ rle.o rle_encoding_test.o -o rle_test
+	./rle_test -s
+	rm *.o rle_test
