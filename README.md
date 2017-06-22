@@ -19,7 +19,7 @@ at least, some explanation.
 
 **Data Structures**
 
-Singly Linked List `c++` `[cpp/data_structure/singly_linked_list/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/singly_linked_list)`
+Singly Linked List `c++` [cpp/data_structure/singly_linked_list/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/singly_linked_list)
 
 Doubly Linked List `c++` `[cpp/data_structure/doubly_linked_list/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/doubly_linked_list)`
 
