@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-This repository is about _Programs_ since `_Programs_ = Algorithms + Data Structures`,
+This repository is about _Programs_ since `Programs = Algorithms + Data Structures`,
 as Niklaus Wirth wrote.
 
 The code is organized into folders named after the language of implementation. Each folder
