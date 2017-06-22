@@ -15,7 +15,7 @@ running and testing is stated. Moreover, each source file has docstring with,
 at least, some explanation.
 
 
-### List
+## List
 
 **Data Structures**
 
@@ -29,16 +29,19 @@ Heap `c++` [`cpp/data_structure/heap/`](https://github.com/pvlbzn/algorithms/tre
 
 Stack `c++` [`cpp/data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/stack)
 
+<br>
 
 **Search**
 
 Binary Search `c++` [`cpp/search/binary_search/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/search/binary_search)
 
+<br>
 
 **Sort**
 
 Insertion Sort `c++` [`cpp/sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/insertion_sort)
 
+<br>
 
 **Encoding**
 
