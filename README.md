@@ -19,27 +19,27 @@ at least, some explanation.
 
 **Data Structures**
 
-Singly Linked List `c++` [cpp/data_structure/singly_linked_list/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/singly_linked_list)
+Singly Linked List `c++` [`cpp/data_structure/singly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/singly_linked_list)
 
-Doubly Linked List `c++` `[cpp/data_structure/doubly_linked_list/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/doubly_linked_list)`
+Doubly Linked List `c++` [`cpp/data_structure/doubly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/doubly_linked_list)
 
-Binary Search Tree `c++` `[cpp/data_structure/binary_search_tree/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/binary_search_tree)`
+Binary Search Tree `c++` [`cpp/data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/binary_search_tree)
 
-Heap `c++` `[cpp/data_structure/heap/](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/heap)`
+Heap `c++` [`cpp/data_structure/heap/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/heap)
 
-Stack `c++` `[cpp/data_structure/stack](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/stack)`
+Stack `c++` [`cpp/data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/stack)
 
 
 **Search**
 
-Binary Search `c++` `[cpp/search/binary_search/](https://github.com/pvlbzn/algorithms/tree/master/cpp/search/binary_search)`
+Binary Search `c++` [`cpp/search/binary_search/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/search/binary_search)
 
 
 **Sort**
 
-Insertion Sort `c++` `[cpp/sort/insertion_sort/](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/insertion_sort)`
+Insertion Sort `c++` [`cpp/sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/insertion_sort)
 
 
 **Encoding**
 
-RLE `[cpp/encoding/rle](https://github.com/pvlbzn/algorithms/tree/master/cpp/encoding/rle)`
+RLE [`cpp/encoding/rle`](https://github.com/pvlbzn/algorithms/tree/master/cpp/encoding/rle)
