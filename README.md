@@ -41,8 +41,7 @@ Binary Search `c++` [`cpp/search/binary_search/`](https://github.com/pvlbzn/algo
 
 Insertion Sort `c++` [`cpp/sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/insertion_sort)
 
-Counting Sort `c++14` [`cpp/sort/counting_sort`]
-(https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/counting_sort)
+Counting Sort `c++14` [`cpp/sort/counting_sort`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/counting_sort)
 
 <br>
 
