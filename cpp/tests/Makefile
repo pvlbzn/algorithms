@@ -28,7 +28,7 @@ rle-test:
 	./rle_test -s
 	rm *.o rle_test
 
-counting-sort:
+counting-sort-test:
 	g++ -std=c++14 -c ../sort/counting_sort/counting_sort.cpp counting_sort_test.cpp
 	g++ counting_sort.o counting_sort_test.o -o cs_test
 	./cs_test

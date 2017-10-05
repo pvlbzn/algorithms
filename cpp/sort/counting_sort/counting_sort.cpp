@@ -18,6 +18,8 @@ int* CountingSort::sort(int* in, int len) {
         }
     }
 
+    delete[] tmp;
+
     return res;
 }
 
