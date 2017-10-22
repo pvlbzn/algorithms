@@ -33,3 +33,9 @@ counting-sort-test:
 	g++ counting_sort.o counting_sort_test.o -o cs_test
 	./cs_test
 	rm *.o cs_test
+
+bracket-balancing-test:
+	g++ -std=c++14 -c ../validation/bracket_balancing/bbalance.cpp bracket_balancing_test.cpp
+	g++ bbalance.o bracket_balancing_test.o -o bb_test
+	./bb_test
+	rm *.o bb_test
