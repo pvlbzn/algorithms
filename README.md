@@ -1,50 +1,53 @@
 # Algorithms and Data Structures
 
-This repository is about _Programs_ since `Programs = Algorithms + Data Structures`,
+This repository is about _programs_ since `Programs = Algorithms + Data Structures`,
 as Niklaus Wirth wrote.
 
-The code is organized into folders named after the language of implementation. Each folder
-tries to be idiomatic in its language of implementation and ecosystem, however,
-it is not the target itself. No implementation is production ready, despite that they developed in Test Driven Development manner. Production ready algorithms and data structures must be robust, generic, and be well protected from a fool. None of these is a target of this repository.
-
-
-### Instructions
-
-Each folder contains it's own `README.md` where all the information considering
-running and testing is stated. Moreover, each source file has docstring with,
-at least, some explanation.
+Code is organized into folders where each folder named after a problem. Sorting algorithms goes to `sort/`, etc.
+No implementation is production ready, use you standard library or well-known 3rd party libraries. Beeing
+production ready implies that code is generic, stable, fool proof.  None of these is a primary target
+of this repository. Also coding style may vary from problem to problem because it was written at a different
+time and using different level of the skill.
 
 
 ## List
 
 **Data Structures**
 
-Singly Linked List `c++` [`cpp/data_structure/singly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/singly_linked_list)
+Singly Linked List `c++` [`data_structure/singly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/singly_linked_list)
 
-Doubly Linked List `c++` [`cpp/data_structure/doubly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/doubly_linked_list)
+Doubly Linked List `c++` [`data_structure/doubly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/doubly_linked_list)
 
-Binary Search Tree `c++` [`cpp/data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/binary_search_tree)
+Binary Search Tree `c++` [`data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/binary_search_tree)
 
-Heap `c++` [`cpp/data_structure/heap/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/heap)
+Heap `c++` [`data_structure/heap/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/heap)
 
-Stack `c++` [`cpp/data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/master/cpp/data_structure/stack)
+Stack `c++` [`data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/stack)
 
 <br>
 
 **Search**
 
-Binary Search `c++` [`cpp/search/binary_search/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/search/binary_search)
+Binary Search `c++` [`search/binary_search/`](https://github.com/pvlbzn/algorithms/tree/master/search/binary_search)
 
 <br>
 
 **Sort**
 
-Insertion Sort `c++` [`cpp/sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/insertion_sort)
+Insertion Sort `c++` [`sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/sort/insertion_sort)
 
-Counting Sort `c++14` [`cpp/sort/counting_sort`](https://github.com/pvlbzn/algorithms/tree/master/cpp/sort/counting_sort)
+Counting Sort `c++14` [`sort/counting_sort`](https://github.com/pvlbzn/algorithms/tree/master/sort/counting_sort)
 
 <br>
 
 **Encoding**
 
-RLE [`cpp/encoding/rle`](https://github.com/pvlbzn/algorithms/tree/master/cpp/encoding/rle)
+RLE `c++` [`encoding/rle`](https://github.com/pvlbzn/algorithms/tree/master/encoding/rle)
+
+<br>
+
+**Validation**
+
+Bracket Balancing `c++14` [`validation/bracket_balancing`](https://github.com/pvlbzn/algorithms/tree/master/validation/bracket_balancing)
+
+Sequence Recovery `python3` [`valudation/bracket_balancing`](https://github.com/pvlbzn/algorithms/tree/master/validation/sequence_recovery)
