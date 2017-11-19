@@ -38,6 +38,8 @@ Insertion Sort `c++` [`sort/insertion_sort/`](https://github.com/pvlbzn/algorith
 
 Counting Sort `c++14` [`sort/counting_sort`](https://github.com/pvlbzn/algorithms/tree/master/sort/counting_sort)
 
+Merge Sort `java` [`sort/merge_sort`](https://github.com/pvlbzn/algorithms/tree/master/sort/merge_sort)
+
 Binary Search Tree `java` [`data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/binary_search_tree)
 
 <br>
