@@ -1,13 +1,13 @@
 # Algorithms and Data Structures
 
-This repository is about _programs_ since `Programs = Algorithms + Data Structures`,
-as Niklaus Wirth wrote.
-
 Code is organized into folders where each folder named after a problem. Sorting algorithms goes to `sort/`, etc.
-No implementation is production ready, use you standard library or well-known 3rd party libraries. Beeing
-production ready implies that code is generic, stable, fool proof.  None of these is a primary target
-of this repository. Also coding style may vary from problem to problem because it was written at a different
-time and using different level of the skill.
+
+**Note**: no implementation here is production ready, use your standard library or well-known 3rd party libraries.
+Being production ready implies that code is generic, stable and fool proof. None of these is primary target
+of this repository. Coding style may vary from problem to problem because it was written at a different
+time and using different level of the skill. Used languages are `C++`, `Java` and `Python`. If some fancy
+feature of a language is used a name of the language will be named with its version, otherwise one may
+imply that a *common* language version was used.
 
 
 ## List
@@ -18,7 +18,7 @@ Singly Linked List `c++` [`data_structure/singly_linked_list/`](https://github.c
 
 Doubly Linked List `c++` [`data_structure/doubly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/doubly_linked_list)
 
-Binary Search Tree `c++` [`data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/binary_search_tree)
+Binary Search Tree `java` [`data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/binary_search_tree)
 
 Heap `c++` [`data_structure/heap/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/heap)
 
@@ -37,6 +37,8 @@ Binary Search `c++` [`search/binary_search/`](https://github.com/pvlbzn/algorith
 Insertion Sort `c++` [`sort/insertion_sort/`](https://github.com/pvlbzn/algorithms/tree/master/sort/insertion_sort)
 
 Counting Sort `c++14` [`sort/counting_sort`](https://github.com/pvlbzn/algorithms/tree/master/sort/counting_sort)
+
+Binary Search Tree `java` [`data_structure/binary_search_tree/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/binary_search_tree)
 
 <br>
 
