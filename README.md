@@ -14,6 +14,8 @@ imply that a *common* language version was used.
 
 **Data Structures**
 
+Graph `c++14`, `generic` [`data_structure/graph/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/graph)
+
 Singly Linked List `c++` [`data_structure/singly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/singly_linked_list)
 
 Doubly Linked List `c++` [`data_structure/doubly_linked_list/`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/doubly_linked_list)
