@@ -46,6 +46,12 @@ Binary Search Tree `java` [`data_structure/binary_search_tree/`](https://github.
 
 <br>
 
+**Machine Learning**
+
+Linear Regression `python3` [`machine_learning/linear_regression/`](https://github.com/pvlbzn/algorithms/tree/master/machine_learning/linear_regression)
+
+<br>
+
 **Encoding**
 
 RLE `c++` [`encoding/rle`](https://github.com/pvlbzn/algorithms/tree/master/encoding/rle)
