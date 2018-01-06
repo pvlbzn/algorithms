@@ -1,13 +1,6 @@
 # Algorithms and Data Structures
 
-Code is organized into folders where each folder named after a problem. Sorting algorithms goes to `sort/`, etc.
-
-**Note**: no implementation here is production ready, use your standard library or well-known 3rd party libraries.
-Being production ready implies that code is generic, stable and fool proof. None of these is primary target
-of this repository. Coding style may vary from problem to problem because it was written at a different
-time and using different level of the skill. Used languages are `C++`, `Java` and `Python`. If some fancy
-feature of a language is used a name of the language will be named with its version, otherwise one may
-imply that a *common* language version was used.
+Various algorithms and data strucures implementation.
 
 
 ## List
