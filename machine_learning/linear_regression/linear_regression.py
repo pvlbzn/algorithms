@@ -46,3 +46,40 @@ def ordinary_least_squares(x, y):
     print(b1, b0)
     return lambda x: w*x + b
 
+
+def batch_gradient_descent(X, y, weights, lrate=0.001, niter=10000, history=True, history_frequency=50):
+    '''
+    Find weights for hypothesis of the form:
+        w_1*x_1 + ... w_n*x_n + b
+    
+    Usage:
+        After gradient descent is done, it returns weigths and history. History
+        can be used as a feedback for hyperparameters tuning. To use weights
+        the most straightforward thing to do is:
+            X.dot(weights)
+
+    Params:
+        X: training data
+        y: ground truth vector
+        weights: initial weights, usually zero vector
+        lrate: learning rate
+        niter: number of iterations
+        history: whether to store history or not
+        history_frequency: how often to write into the history
+    '''
+    cost_function = lambda X, y, weights: np.sum((X.dot(weights) - y)**2) / (2*len(y))
+
+    history = []
+    m = len(y)
+    
+    for i in range(niter):
+        h = X.dot(weights)
+        loss = h - y
+        gradient = X.T.dot(loss) / m
+        weights = weights - lrate*gradient
+        cost = cost_function(X, y, weights)
+        
+        if history and i % history_frequency == 0:
+            history.append(cost)
+
+    return weights, history
