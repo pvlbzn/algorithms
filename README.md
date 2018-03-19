@@ -19,6 +19,8 @@ Heap `c++` [`data_structure/heap/`](https://github.com/pvlbzn/algorithms/tree/ma
 
 Stack `c++` [`data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/stack)
 
+List `scala` `functional` [`data_structure/list`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/list)
+
 <br>
 
 **Search**
