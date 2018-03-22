@@ -21,6 +21,8 @@ Stack `c++` [`data_structure/stack`](https://github.com/pvlbzn/algorithms/tree/m
 
 List `scala` `functional` [`data_structure/list`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/list)
 
+Stack `scala` `functional` [`data_structure/functional_stack`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/functional_stack)
+
 <br>
 
 **Search**
