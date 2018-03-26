@@ -23,6 +23,9 @@ List `scala` `functional` [`data_structure/list`](https://github.com/pvlbzn/algo
 
 Stack `scala` `functional` [`data_structure/functional_stack`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/functional_stack)
 
+Natural Numbers `scala` `functional` [`data_structure/natural_numbers`](https://github.com/pvlbzn/algorithms/tree/master/data_structure/natural_numbers)
+
+
 <br>
 
 **Search**
